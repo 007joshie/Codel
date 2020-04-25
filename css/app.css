@@ -1,0 +1,650 @@
+body {
+  background: #121212;
+}
+
+#wrapper {
+  padding-left: 0;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+#wrapper.toggled {
+  padding-left: 250px;
+}
+
+#sidebar-wrapper {
+  z-index: 1000;
+  position: fixed;
+  left: 250px;
+  width: 0;
+  height: 100%;
+  margin-left: -250px;
+  overflow-y: auto;
+  background: rgba(255, 255, 255, 0.08);
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+#sidebar-wrapper {
+  box-shadow: inset -1px 0px 0px 0px rgba(255, 255, 255, 0.08);
+}
+
+#wrapper.toggled #sidebar-wrapper {
+  width: 250px;
+}
+
+#page-content-wrapper {
+  width: 100%;
+  position: absolute;
+  padding: 15px;
+}
+
+#wrapper.toggled #page-content-wrapper {
+  position: absolute;
+  margin-right: -250px;
+}
+
+/* Sidebar Styles */
+.sidebar-nav {
+  position: absolute;
+  top: 0;
+  width: 250px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.sidebar-nav li {
+  text-indent: 20px;
+  line-height: 40px;
+}
+
+.sidebar-nav li a {
+  display: block;
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.sidebar-nav li a:hover {
+  text-decoration: none;
+}
+
+.sidebar-nav li a:active,
+.sidebar-nav li a:focus {
+  text-decoration: none;
+}
+
+.sidebar-nav>.sidebar-brand {
+  height: 65px;
+  font-size: 18px;
+  line-height: 60px;
+}
+
+.sidebar-nav>.sidebar-brand a {
+  color: #999999;
+}
+
+.sidebar-nav>.sidebar-brand a:hover {
+  color: #000;
+  background: none;
+}
+
+@media(min-width:1024px) {
+  #wrapper {
+    padding-left: 25%;
+  }
+
+  #wrapper.toggled {
+    padding-left: 0;
+    overflow: hidden;
+  }
+
+  #sidebar-wrapper {
+    width: 25%;
+    overflow: hidden;
+  }
+
+  #wrapper.toggled #sidebar-wrapper {
+    width: 0;
+  }
+
+  #page-content-wrapper {
+    padding: 20px;
+    position: relative;
+  }
+
+  #wrapper.toggled #page-content-wrapper {
+    position: relative;
+    margin-right: 0;
+  }
+
+  button.menu-btn {
+    width: 100%;
+  }
+}
+
+.sidebar-brand {
+  border-bottom: 1px solid rgba(102, 97, 91, 0.3);
+}
+
+.sidebar-brand {
+  padding: 18px 0px;
+  margin: 0 20px;
+}
+
+.navbar .navbar-nav>li>a p {
+  display: inline-block;
+  margin: 0;
+}
+
+p {
+  font-size: 12pt;
+  line-height: 1.4em;
+}
+
+btn-menu {
+  border-radius: 3px;
+  padding: 4px 12px;
+  margin: 14px 5px 5px 20px;
+  font-size: 14px;
+  float: left;
+}
+
+.container-fluid {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* SIDEBAR */
+@media (min-width: 1024px) {
+  .nav-sidebar {
+    padding-top: 6mm;
+    padding-left: 12mm;
+  }
+}
+
+@media (max-width: 1024px) and (min-width: 640px) {
+  .top-bar {
+    z-index: 1000;
+    padding-right: 10%;
+    padding-top: 10mm;
+    width: 100%;
+    padding-bottom: 3mm;
+    position: fixed;
+    top: 0;
+    margin: auto;
+    background: rgb(18, 18, 18);
+    background: linear-gradient(180deg, rgba(18, 18, 18, 1) 0%, rgba(18, 18, 18, 0.625109418767507) 72%, rgba(18, 18, 18, 0.1) 100%) !important;
+  }
+  .spacer {
+    height: 3mm !important;
+  }
+
+  .codel-card {
+    display: inline-block;
+    margin-bottom: 6mm;
+    min-width: 100% !important;
+}
+}
+
+@media (max-width: 1024px) {
+  .menu {
+    display: block !important;
+  }
+
+  .menu-button {
+    width: 100%;
+  }
+
+  .top-bar {
+    position: relative !important;
+    left: 0;
+    width: 100%;
+    padding-right: 0 !important;
+    padding-top: 0 !important;
+    padding-bottom: 0;
+    background: none !important;
+    background-color: #121212 !important;
+  }
+
+  li>button.menu-btn, li>button.login-btn {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  li>button.login-btn {
+    margin-top: 3mm;
+  }
+
+  button.menu-icon {
+    padding: 0;
+    border: 0;
+  }
+}
+
+.nav {
+  border-left: 2px solid rgba(255, 255, 255, 0.2);
+  list-style: none;
+}
+
+/* all links */
+.nav-sidebar .nav>li>a {
+  border-left: 3px solid transparent;
+  padding: 0em 1em;
+  font-weight: 400;
+  margin-left: -2px;
+  font-family: 'Baloo Bhai 2', sans-serif;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.32);
+  font-size: 18pt;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/* nested links */
+.nav-sidebar .nav .nav>li>a {
+  padding-left: 40px;
+  font-size: 14px;
+}
+
+/* hover links */
+.nav-sidebar .nav>li:not(.active)>a:hover {
+  color: rgba(255, 255, 255, 0.78);
+  ;
+  text-decoration: none;
+  background-color: transparent;
+  border-left-width: 3px;
+  border-left-color: transparent;
+  transition: color ease 0.3s;
+}
+
+/* focus links */
+.nav-sidebar .nav>li>a:focus {
+  text-decoration: none;
+  background-color: transparent;
+}
+
+/* active links */
+.nav-sidebar .nav>.active>a {
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+  background-color: transparent;
+  border-left-color: #AA519E;
+}
+
+/* all active links */
+.nav-sidebar .nav>.active>a,
+.nav-sidebar .nav>.active:hover>a,
+.nav-sidebar .nav>.active:focus>a {
+  font-weight: 500;
+  transition: color ease 0.5s;
+}
+
+/* nested active links */
+.nav-sidebar .nav .nav>.active>a,
+.nav-sidebar .nav .nav>.active:hover>a,
+.nav-sidebar .nav .nav>.active:focus>a {
+  font-weight: 500;
+}
+
+@media (min-width: 1024px) {
+  .nav-sidebar .nav ul {
+    display: block;
+    padding-bottom: 10px;
+  }
+
+  .nav-sidebar .nav>.active>ul {
+    display: block;
+  }
+
+  ul ul, ol ul, ul ol, ol ol {
+    margin-left: 4.25rem;
+  }
+}
+
+/*???????????????????????????????????*/
+.logo {
+  width: 70%;
+  height: auto;
+  margin: 10mm;
+}
+
+.title {
+  position: absolute;
+  height: 13mm;
+  background-color: rgb(50, 50, 50);
+  border-radius: 50px;
+  overflow: none;
+  margin-left: 6mm;
+  padding-left: 4mm;
+  padding-right: 4mm;
+  font-size: 24pt;
+  color: rgba(255, 255, 255, 0.7);
+  font-family: 'Baloo Bhai 2', cursive;
+  font-weight: 500;
+  user-select: none;
+}
+
+/* Typograpgy*/
+.middle h1, h2, h3, h4, h5, h6 {
+  line-height: 1.1em;
+  margin: 0;
+}
+
+.middle h1 {
+  font-family: 'Comfortaa', cursive;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.94);
+  font-size: 48pt;
+}
+
+.middle h2 {
+  font-family: 'Comfortaa', cursive;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.94);
+  font-size: 36pt;
+}
+
+.middle h3 {
+  font-family: 'Comfortaa', cursive;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.94);
+  font-size: 24pt;
+}
+
+.middle h4 {
+  font-family: 'Baloo Bhai 2', sans-serif;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 18pt;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.middle h5 {
+  font-family: 'Baloo Bhai 2', sans-serif;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 16pt;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.middle h6 {
+  font-family: 'Baloo Bhai 2', sans-serif;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 14pt;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+dt {
+  line-height: 1.6em;
+}
+
+img {
+  border-radius: 4mm;
+}
+
+ul {
+  list-style: none;
+  /* Remove default bullets */
+}
+
+ol {
+  margin: 0;
+  color: #AA519E;
+}
+
+.codel-card ul li::before {
+  content: "\2022";
+  color: #AA519E;
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+  margin-top: 0.2em;
+}
+
+ol li::before {
+  display: none;
+}
+
+.header-list li {
+  font-size: 24pt;
+  margin-top: 0;
+  margin-bottom: 3mm;
+  line-height: 1em !important;
+}
+
+ol p {
+  font-size: 24pt;
+}
+
+ol li.not(code) {
+  counter-increment: list;
+  list-style-type: none;
+  position: relative;
+}
+
+dt {
+  margin-top: 3mm;
+}
+
+blockquote {
+  padding: 3mm;
+  border-left: solid 3px;
+  border-color: #AA519E;
+  font-family: 'Baloo Bhai 2', cursive;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 18pt;
+  margin-top: 0;
+  margin-bottom: 0;
+  width: 80%;
+  line-height: 1.3em;
+  transition: ease-in-out 0.1s;
+}
+
+blockquote:hover {
+  border-left: solid 5px;
+  border-color: #AA519E;
+}
+
+.hide {
+  padding-top: 1.5mm;
+  padding-bottom: 1.5mm;
+  border: 0;
+  margin: 0;
+}
+
+b {
+  font-weight: bolder;
+}
+
+/* Output the numbers using the counter() function, but use a custom color, and position the numbers how we want */
+ol li:before {
+  color: #AA519E;
+  content: counter(list) ".";
+  left: -32px;
+  position: absolute;
+  text-align: right;
+  width: 26px;
+}
+
+button {
+  background-color: rgba(255, 255, 255, 0);
+  border: solid 2px;
+  border-color: rgba(255, 255, 255, 0.2);
+  display: inline-block;
+  margin-left: 3mm;
+  padding: 3mm 9mm;
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: 4mm;
+  transition: all .2s ease;
+  color: rgba(255, 255, 255, 0.7);
+  font-family: 'Comfortaa', cursive;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.94);
+  font-size: 16pt;
+}
+
+button:hover {
+  background-color: rgb(111, 120, 185);
+  border-color: rgba(255, 255, 255, 0);
+  color: rgba(0, 0, 0, 0.7);
+}
+
+button:focus {
+  outline: 0;
+}
+
+.codel-card {
+  display: inline-block;
+  margin-bottom: 6mm;
+  max-width: 850px;
+  min-width: 90%;
+}
+
+.title::before {
+  background: #121212;
+}
+
+.inner-codel-card {
+  margin-top: 8mm;
+  padding: 6mm;
+  padding-top: 9mm;
+  width: auto;
+  height: auto;
+  overflow: auto;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 4mm;
+}
+
+.inner-codel-card a:link {
+  font-family: 'Baloo Bhai 2', cursive;
+  font-weight: 400;
+  font-size: 12pt;
+  color: #AA519E;
+}
+
+.inner-codel-card a:hover {
+  color: #6F78B9;
+}
+
+.inner-codel-card a:visited {
+  color: #AA519E;
+}
+
+.inner-codel-card p, .inner-codel-card li, dl {
+  font-family: 'Baloo Bhai 2', sans-serif;
+  font-weight: 400;
+  font-size: 13pt;
+  /*Increased from 12 for readibility*/
+  color: rgba(255, 255, 255, 0.64);
+  line-height: 1.3em !important;
+}
+
+.inner.has(+ .inner-codel-card) {
+  margin: 0 !important;
+}
+
+ul.nav {
+  line-height: 2;
+}
+
+ul>li>ul {
+  display: block;
+}
+
+.sidebar-content {
+  overflow: hidden;
+  max-width: 20em;
+  float: right;
+}
+
+.login-btn {
+  border-radius: 200px;
+  border: solid 2px rgba(255, 255, 255, 0.28);
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.48);
+}
+
+.menu-btn {
+  border: none;
+  border-radius: 200px;
+  background-color: none;
+  color: rgba(255, 255, 255, 0.48);
+  font-weight: 400;
+}
+
+.top-bar {
+  z-index: 1000;
+  padding-right: 10%;
+  padding-top: 10mm;
+  width: 75%;
+  padding-bottom: 3mm;
+  position: fixed;
+  top: 0;
+  margin: auto;
+  background: rgb(18, 18, 18);
+  background: linear-gradient(180deg, rgba(18, 18, 18, 1) 0%, rgba(18, 18, 18, 0.625109418767507) 72%, rgba(18, 18, 18, 0.1) 100%) !important;
+}
+
+.spacer {
+  position: relative;
+  width: auto;
+  height: 50mm;
+}
+
+.footer {
+  position: relative;
+  width: 100%;
+  height: 20em;
+  background-color: black;
+  margin: 0;
+}
+
+.social-wrapper {
+  position: absolute;
+  width: 220px;
+  height: 5em;
+  bottom: 0;
+  border-top: 2px solid rgba(255, 255, 255, 0.4);
+  margin-right: 12mm;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.social-cell {
+  margin-top: 3mm;
+  display: block;
+  position: relative;
+  bottom: 0;
+  margin-bottom: 2em;
+  width: 2em;
+}
+
+.social-cell>img {
+  border-radius: 0 !important;
+  width: 100%;
+}
+
+.socials-colour {
+  fill: rgba(255, 255, 255, 0.3);
+  transition: all 0.4s ease-out;
+}
+
+.socials-colour:hover {
+  fill: #6F78B9;
+}
