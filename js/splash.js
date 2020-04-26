@@ -7,33 +7,12 @@ $(function() {
   });
 })
 
-$(function() {
-  $('a[href*=\\#]:not([href=\\#])').click(function() {
-    if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
-      var target = $(this.hash);
-      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-      if (target.length) {
-        $('html,body').animate({
-          scrollTop: target.offset().top - 200
-        }, 1000);
-        $( this).find( "div.inner-codel-card" ).css( "background-color", "red" );
-        return false;
-      }
-    }
-  });
-});
+
 
 /* ==============================================
 SCROLLSPY -->
 =============================================== */
 
-$('body').scrollspy({
-  target: '.nav-sidebar'
-});
-
-$('[data-spy="scroll"]').each(function() {
-  var $spy = $(this).scrollspy('refresh')
-})
 
 $('.nav-sidebar>nav>li>a').click(function() {
     $('.nav-sidebar>nav>li').removeClass('active');
@@ -54,6 +33,23 @@ function loadBMAnimation(loader) {
  for (var i = 0; i < loader.length; i++) {
   loadBMAnimation(loader[i]);
  }
+
+ var loader2 = document.getElementsByClassName('hero-img');
+ function loadBMAnimation2(loader2) {
+  var animationSplash = bodymovin.loadAnimation({
+    container: loader2,
+    renderer: "svg",
+    loop: true,
+    autoplay: true,
+    path: 'https://assets1.lottiefiles.com/packages/lf20_MZTE5I.json',
+    rendererSettings: {
+  	preserveAspectRatio: 'xMidYMid meet'
+  }
+  });
+ }
+  for (var i = 0; i < loader2.length; i++) {
+   loadBMAnimation2(loader2[i]);
+  }
 
  window.onload = function() {
   // PR.prettyPrint();

@@ -3676,7 +3676,8 @@ select {
               justify-content: flex-start; }
 
 .no-js [data-responsive-menu] ul {
-  display: none; }
+  display: none;
+  transition: all .5s ease-in-out;}
 
 .menu-icon {
   position: relative;

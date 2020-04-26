@@ -1,5 +1,8 @@
 body {
   background: #121212;
+  opacity: 0;
+  transition: opacity 1s linear;
+	transition-delay: 50ms;
 }
 
 #wrapper {
@@ -29,9 +32,6 @@ body {
   transition: all 0.5s ease;
 }
 
-#sidebar-wrapper {
-  box-shadow: inset -1px 0px 0px 0px rgba(255, 255, 255, 0.08);
-}
 
 #wrapper.toggled #sidebar-wrapper {
   width: 250px;
@@ -92,8 +92,29 @@ body {
   color: #000;
   background: none;
 }
+.purple {
+  color: #AA519E;
+}
 
 @media(min-width:1024px) {
+  .intro-container {
+    position: absolute;
+    top: 20%;
+    left: calc(25vw - 320px + 10mm);
+    width: 23em;
+  }
+
+  @media(max-width:1300px) {
+  button.menu-btn{
+      padding: 3mm 4mm !important;
+  }
+    }
+
+  .intro-container h3 {
+    font-size: 2.8em;
+    line-height: 1.3em;
+  }
+
   #wrapper {
     padding-left: 25%;
   }
@@ -169,7 +190,20 @@ btn-menu {
   }
 }
 
+@media (max-width: 640px) {
+  .intro-container {
+  display: none;
+  }
+}
+
+
 @media (max-width: 1024px) and (min-width: 640px) {
+  .intro-container {
+    position: relative;
+    width: 80%;
+  }
+
+
   .top-bar {
     z-index: 1000;
     padding-right: 10%;
@@ -198,6 +232,13 @@ btn-menu {
     display: block !important;
   }
 
+  @media (max-width: 640px) {
+  .spacer {
+    height: 3mm !important;
+  }
+
+  }
+
   .menu-button {
     width: 100%;
   }
@@ -213,6 +254,7 @@ btn-menu {
     background-color: #121212 !important;
   }
 
+
   li>button.menu-btn, li>button.login-btn {
     display: block;
     margin: 0 auto;
@@ -227,6 +269,10 @@ btn-menu {
     padding: 0;
     border: 0;
   }
+}
+
+.loaded{
+	opacity: 1;
 }
 
 .nav {
@@ -338,28 +384,28 @@ btn-menu {
   margin: 0;
 }
 
-.middle h1 {
+ h1 {
   font-family: 'Comfortaa', cursive;
   font-weight: 700;
   color: rgba(255, 255, 255, 0.94);
   font-size: 48pt;
 }
 
-.middle h2 {
+h2 {
   font-family: 'Comfortaa', cursive;
   font-weight: 700;
   color: rgba(255, 255, 255, 0.94);
   font-size: 36pt;
 }
 
-.middle h3 {
+ h3 {
   font-family: 'Comfortaa', cursive;
   font-weight: 700;
   color: rgba(255, 255, 255, 0.94);
   font-size: 24pt;
 }
 
-.middle h4 {
+ h4 {
   font-family: 'Baloo Bhai 2', sans-serif;
   font-weight: 500;
   color: rgba(255, 255, 255, 0.78);
@@ -368,7 +414,7 @@ btn-menu {
   margin-bottom: 0;
 }
 
-.middle h5 {
+h5 {
   font-family: 'Baloo Bhai 2', sans-serif;
   font-weight: 500;
   color: rgba(255, 255, 255, 0.78);
@@ -592,12 +638,12 @@ ul>li>ul {
   padding-right: 10%;
   padding-top: 10mm;
   width: 75%;
-  padding-bottom: 3mm;
+  padding-bottom: 6mm;
   position: fixed;
   top: 0;
   margin: auto;
   background: rgb(18, 18, 18);
-  background: linear-gradient(180deg, rgba(18, 18, 18, 1) 0%, rgba(18, 18, 18, 0.625109418767507) 72%, rgba(18, 18, 18, 0.1) 100%) !important;
+background: linear-gradient(180deg, rgba(18,18,18,1) 20%, rgba(18,18,18,0.7315519957983193) 74%, rgba(18,18,18,0.07046568627450978) 100%) !important;
 }
 
 .spacer {
@@ -647,4 +693,88 @@ ul>li>ul {
 
 .socials-colour:hover {
   fill: #6F78B9;
+}
+
+.logo-tag {
+  position: relative;
+  display: inline;
+	font-family: 'Comfortaa', cursive;
+	font-weight: 700;
+	color: #6F78B9;
+	font-size: 6mm;
+	text-decoration: none;
+  margin-top: 4px;
+  margin-left: 1em;
+}
+
+.splash-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1000;
+}
+
+.splash {
+  width: 100%;
+  height: 100%;
+  background-color: #121212;
+  background: url('../assets/SVG/splash.svg') top center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  fill: #121212;
+  position: absolute;
+}
+
+.hero-container {
+  display: block;
+  float: right;
+  min-width: 100%;
+  width: 60vw;
+  height: auto;
+  position: relative;
+}
+
+.hero-img {
+  display: block;
+  margin: 0 auto;
+}
+
+.btn-selection {
+  position: absolute;
+  width: 100%;
+  bottom: -5em;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.selection-cell {
+  text-align: center;
+  margin-top: 3mm;
+  display: block;
+  position: relative;
+  bottom: 0;
+  width: 47%;
+  padding: 3mm;
+  border: none;
+  border-radius: 200px;
+  background-color: none;
+  color: rgba(255, 255, 255, 0.48);
+  cursor: pointer;
+  border-radius: 4mm;
+  transition: all .2s ease;
+  color: rgba(255, 255, 255, 0.7);
+  font-family: 'Comfortaa', cursive;
+  color: rgba(255, 255, 255, 0.94);
+  font-size: 17pt;
+  font-weight: bolder;
+}
+
+.outline {
+  border: solid 1px rgba(255, 255, 255, 0.28);
+  color: rgba(255, 255, 255, 0.48);
+}
+
+.blue  {
+  background-color: #6F78B9;
 }
