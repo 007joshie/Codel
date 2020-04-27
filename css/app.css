@@ -108,6 +108,12 @@ body {
   button.menu-btn{
       padding: 3mm 4mm !important;
   }
+
+  #page-content-wrapper {
+    width: 100%;
+    position: relative;
+    padding: 15px;
+  }
     }
 
   .intro-container h3 {
@@ -192,15 +198,24 @@ btn-menu {
 
 @media (max-width: 640px) {
   .intro-container {
-  display: none;
+    position: static;
+    width: 80%;
+  }
+
+  .btn-selection {
+    bottom: 1em !important;
   }
 }
 
 
 @media (max-width: 1024px) and (min-width: 640px) {
   .intro-container {
-    position: relative;
+    position: static;
     width: 80%;
+  }
+
+  .btn-selection {
+    bottom: 1em !important;
   }
 
 
@@ -216,9 +231,10 @@ btn-menu {
     background: rgb(18, 18, 18);
     background: linear-gradient(180deg, rgba(18, 18, 18, 1) 0%, rgba(18, 18, 18, 0.625109418767507) 72%, rgba(18, 18, 18, 0.1) 100%) !important;
   }
-  .spacer {
-    height: 3mm !important;
-  }
+
+.spacer {
+  padding-top: 0 !important;
+}
 
   .codel-card {
     display: inline-block;
@@ -234,7 +250,7 @@ btn-menu {
 
   @media (max-width: 640px) {
   .spacer {
-    height: 3mm !important;
+    padding-top: 0 !important;
   }
 
   }
@@ -369,13 +385,14 @@ btn-menu {
   border-radius: 50px;
   overflow: none;
   margin-left: 6mm;
-  padding-left: 4mm;
-  padding-right: 4mm;
-  font-size: 24pt;
-  color: rgba(255, 255, 255, 0.7);
+  padding-left: 5mm;
+  padding-right: 5mm;
+  font-size: 21pt;
+  color: rgba(255, 255, 255, 0.85);
   font-family: 'Baloo Bhai 2', cursive;
-  font-weight: 500;
+  font-weight: 400;
   user-select: none;
+  line-height: 1.8;
 }
 
 /* Typograpgy*/
@@ -558,7 +575,7 @@ button:focus {
   display: inline-block;
   margin-bottom: 6mm;
   max-width: 850px;
-  min-width: 90%;
+  min-width: 50vw;
 }
 
 .title::before {
@@ -594,10 +611,10 @@ button:focus {
 .inner-codel-card p, .inner-codel-card li, dl {
   font-family: 'Baloo Bhai 2', sans-serif;
   font-weight: 400;
-  font-size: 13pt;
+  font-size: 17pt;
   /*Increased from 12 for readibility*/
   color: rgba(255, 255, 255, 0.64);
-  line-height: 1.3em !important;
+  line-height: 1.4em !important;
 }
 
 .inner.has(+ .inner-codel-card) {
@@ -649,7 +666,10 @@ background: linear-gradient(180deg, rgba(18,18,18,1) 20%, rgba(18,18,18,0.731551
 .spacer {
   position: relative;
   width: auto;
-  height: 50mm;
+  height: 100%;;
+  padding-top: 20mm;
+  padding-left: 6mm !important;
+  padding-bottom: 6mm !important;
 }
 
 .footer {
@@ -746,6 +766,7 @@ background: linear-gradient(180deg, rgba(18,18,18,1) 20%, rgba(18,18,18,0.731551
   right: 0;
   display: flex;
   justify-content: space-between;
+    z-index: 1001 !important;
 }
 
 .selection-cell {
