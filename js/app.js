@@ -56,6 +56,6 @@ function loadBMAnimation(loader) {
  }
 
  window.onload = function() {
-  // PR.prettyPrint();
+  PR.prettyPrint();
   document.body.className += " loaded";
 }

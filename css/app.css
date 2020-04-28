@@ -216,6 +216,11 @@ btn-menu {
 
   .btn-selection {
     bottom: 1em !important;
+    position: fixed !important;
+  }
+
+  .outline {
+    background-color: #1d1e26 !important;
   }
 
 
@@ -437,7 +442,7 @@ h5 {
   color: rgba(255, 255, 255, 0.78);
   font-size: 16pt;
   margin-top: 0;
-  margin-bottom: 0;
+  margin-bottom: 3mm;
 }
 
 .middle h6 {
@@ -798,4 +803,18 @@ background: linear-gradient(180deg, rgba(18,18,18,1) 20%, rgba(18,18,18,0.731551
 
 .blue  {
   background-color: #6F78B9;
+}
+
+.advice {
+  font-size: 14pt !important;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+code {
+  color: rgba(255,255,255,0.8);
+  padding: 1mm 1.5mm;
+  background-color: rgba(255,255,255,0.1);
+  border-radius: .25rem;
+  font-family: 'Inconsolata', monospace !important;
+	font-size: 13pt;
 }
