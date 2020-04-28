@@ -818,3 +818,7 @@ code {
   font-family: 'Inconsolata', monospace !important;
 	font-size: 13pt;
 }
+
+ul.header-list > ul > li{
+  margin-bottom: 1mm;
+}
