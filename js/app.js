@@ -55,6 +55,10 @@ function loadBMAnimation(loader) {
   loadBMAnimation(loader[i]);
  }
 
+ $('.bodymovin').click(function(e) {
+   document.body.className -= " loaded";
+   window.location = "index.html"});
+
  window.onload = function() {
   PR.prettyPrint();
   document.body.className += " loaded";

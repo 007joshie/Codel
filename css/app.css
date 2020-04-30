@@ -1,7 +1,7 @@
 body {
   background: #121212;
   opacity: 0;
-  transition: opacity 1s linear;
+  transition: opacity 1.2s ease-in-out;
 	transition-delay: 50ms;
 }
 
@@ -381,6 +381,7 @@ btn-menu {
   width: 70%;
   height: auto;
   margin: 10mm;
+  cursor: pointer;
 }
 
 .title {
@@ -813,7 +814,7 @@ background: linear-gradient(180deg, rgba(18,18,18,1) 20%, rgba(18,18,18,0.731551
 code {
   color: rgba(255,255,255,0.8);
   padding: 1mm 1.5mm;
-  background-color: rgba(255,255,255,0.1);
+  background-color: style-support);
   border-radius: .25rem;
   font-family: 'Inconsolata', monospace !important;
 	font-size: 13pt;
@@ -821,4 +822,93 @@ code {
 
 ul.header-list > ul > li{
   margin-bottom: 1mm;
+}
+
+.style-support {
+  height: 2.5em;
+  border: 0;
+  padding: 3mm;
+  border-radius: 3mm;
+  background-color: rgba(255,255,255,0.12);
+  font-family: 'Baloo Bhai 2', sans-serif;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 16pt;
+  margin-bottom: 4mm:
+}
+
+.style-support::placeholder {
+  color: rgba(255,255,255,0.2);
+}
+
+.style-support[placeholder]:focus {
+  color: rgba(255,255,255,0.6);
+  background-color: rgba(255,255,255,0.2);
+}
+
+[type='text']:focus {
+  box-shadow: none;
+}
+.btn-submit {
+  float: right;
+background-color: #AA519E;
+border: solid 2px;
+border-color: rgba(255, 255, 255, 0.0);
+display: inline-block;
+margin-left: 3mm;
+padding: 3mm 9mm;
+text-decoration: none;
+cursor: pointer;
+border-radius: 4mm;
+transition: all .2s ease;
+color: rgba(255, 255, 255, 0.7);
+font-family: 'Comfortaa', cursive;
+font-weight: 700;
+color: rgba(255, 255, 255, 0.94);
+font-size: 16pt;
+}
+.btn-clear {
+  float: right;
+background-color:none;
+border: solid 2px;
+border-color: rgba(255, 255, 255, 0.0);
+display: inline-block;
+margin-left: 3mm;
+padding: 3mm 9mm;
+text-decoration: none;
+cursor: pointer;
+border-radius: 4mm;
+transition: all .2s ease;
+color: rgba(255, 255, 255, 0.2) !important;
+font-family: 'Comfortaa', cursive;
+font-weight: lighter;
+color: rgba(255, 255, 255, 0.94);
+font-size: 16pt;
+}
+
+h3.name{
+  display: inline-block;
+  margin-left: 6mm;
+}
+
+.employee {
+  padding-left:2mm;
+  padding-right: 2mm;
+  width: calc(100%/7 - 1.2mm);
+
+}
+
+.BOD {
+  background-color: transparent;
+  margin-top: 0;
+  font-weight: 400;
+}
+.BOD > h3{
+color: rgba(255,255,255,0.64);
+}
+
+.BOD-img {
+  min-width: 100px;
+  width: 15%;
+  margin-bottom: 3mm;
 }
